@@ -12,10 +12,10 @@ let $ = nobyda();
 let run = EnvInfo();
 
 async function SwitchRegion(play) {
-	const Group = $.read('港台番剧') || '港台番剧'; //Your blibli policy group name.
+	const Group = $.read('BiliArea_Policy') || '港台番剧'; //Your blibli policy group name.
 	const CN = $.read('DIRECT') || 'DIRECT'; //Your China sub-policy name.
-	const TW = $.read('台湾') || '台湾'; //Your Taiwan sub-policy name.
-	const HK = $.read('香港') || '香港'; //Your HongKong sub-policy name.
+	const TW = $.read('BiliArea_CN') || '台湾'; //Your Taiwan sub-policy name.
+	const HK = $.read('BiliArea_HK') || '香港'; //Your HongKong sub-policy name.
 	const current = await $.getPolicy(Group);
 	const area = (() => {
 		if (/\u50c5[\u4e00-\u9fa5]+\u6e2f|%20%E6%B8%AF&/.test(play)) {
